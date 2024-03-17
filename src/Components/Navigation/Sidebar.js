@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
 import { FaTimes } from "react-icons/fa";
 
 import { links } from "../../Utils/website-data";
 
+import { useNavigationContext } from "../../Context/navigation_context";
+
 const Sidebar = () => {
-	const isSidebarOpen = true;
+	const { isSidebarOpen, closeSidebar } = useNavigationContext();
 	return (
 		<SidebarContainer>
 			<aside
 				className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
 			>
 				<div className="sidebar-header">
-					<button className="close-btn" type="button">
+					<button className="close-btn" type="button" onClick={closeSidebar}>
 						<FaTimes></FaTimes>
 					</button>
 				</div>
@@ -22,7 +23,7 @@ const Sidebar = () => {
 					{links.map((singleLink) => {
 						const { id, name, url } = singleLink;
 						return (
-							<li key={id}>
+							<li key={id} onClick={closeSidebar}>
 								<Link to={url}>{name}</Link>
 							</li>
 						);

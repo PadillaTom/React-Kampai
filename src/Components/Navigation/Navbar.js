@@ -5,13 +5,15 @@ import styled from "styled-components";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import { links } from "../../Utils/website-data";
+import { useNavigationContext } from "../../Context/navigation_context";
 
 const Navbar = () => {
+	const { openSidebar } = useNavigationContext();
 	return (
 		<NavContainer>
 			<div className="nav-center">
 				<div className="nav-header">
-					<button className="nav-toggle" type="button">
+					<button className="nav-toggle" type="button" onClick={openSidebar}>
 						<AiOutlineMenu></AiOutlineMenu>
 					</button>
 				</div>
