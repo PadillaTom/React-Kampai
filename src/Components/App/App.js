@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Navbar, Sidebar} from "../Navigation";
 import {ScrollToTop} from "../Utils";
 
-import {About, Contact, Homepage, Menu, Wines} from "../../Pages";
+import {About, Contact, Landing, Menu, Wines} from "../../Pages";
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
             {/* Routes */}
             <Switch>
                 <Route path="/" exact>
-                    <Homepage></Homepage>
+                    <Landing></Landing>
                 </Route>
                 <Route path="/about">
                     <About></About>

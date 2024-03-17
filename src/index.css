@@ -47,6 +47,8 @@
     --ShadowDark: 0px 3px 9px rgba(0, 0, 0, 0.23);
     --WidthMax: 1350px;
     --WidthFixed: 620px;
+    --NavbarHeight: 4rem;
+    --NavbarHeight980: 4.5rem;
 }
 
 *,

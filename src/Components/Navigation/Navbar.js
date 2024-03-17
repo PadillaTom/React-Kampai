@@ -30,14 +30,15 @@ const Navbar = () => {
 };
 
 const NavContainer = styled.nav`
-  z-index: 800;
+  z-index: 1000;
   width: 100%;
-  height: 4rem;
+  height: var(--NavbarHeight);
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--ColorBlack);
   color: var(--ColorWhite);
+  position: fixed;
 
   .nav-center {
     width: 87%;
@@ -67,7 +68,7 @@ const NavContainer = styled.nav`
   }
 
   @media screen and (min-width: 768px) {
-    height: 4.5rem;
+    height: var(--NavbarHeight980);
     .nav-toggle {
       svg {
         font-size: 1.8rem;
