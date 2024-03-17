@@ -6,8 +6,7 @@
 /* 1. Fonts */
 /* ======================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@100;200;300;400;600;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* ======================================================================== */
 /* 2. CSS */
 /* ======================================================================== */
@@ -35,9 +34,9 @@
 	--ColorSemiCrimson: rgb(255, 24, 70);
 	--ColorSearchInput: #dddddd83;
 	/* Fonts */
-	--FontLora: "Lora", Georgia, serif;
-	--FontBebas: "Bebas Neue", Arial, Helvetica, sans-serif;
-	--FontWork: "Work Sans", Arial, Helvetica, sans-serif;
+	--FontThick: "Jost", sans-serif;
+	--FontThin: "Poppins", sans-serif;
+	--FontTextLogo: "Raleway", sans-serif;
 	--FontColorDark: #181b20;
 	--FontColorGrey: #656a70;
 	/* Utils */
@@ -84,7 +83,7 @@ hr {
 	color: var(--ColorPiel);
 	padding: 0.375rem 0.75rem;
 	display: inline-block;
-	font-family: var(--FontLora);
+	font-family: var(--FontThick);
 	font-weight: 200;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -101,7 +100,7 @@ hr {
 }
 .btn-fill {
 	outline: none;
-	font-family: var(--FontWork);
+	font-family: var(--FontTextLogo);
 	font-size: 1.5rem;
 	text-align: center;
 	font-weight: 300;

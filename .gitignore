@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+#WebStorm
+.idea/
+
+
 # production
 /build
 

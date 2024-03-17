@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
 import { AiOutlineMenu } from "react-icons/ai";
 
 import { links } from "../../Utils/website-data";
 import { useNavigationContext } from "../../Context/navigation_context";
+
+import { TextLogo } from "../../Utils/Kampai Constants/";
 
 const Navbar = () => {
 	const { openSidebar } = useNavigationContext();
@@ -16,6 +17,7 @@ const Navbar = () => {
 					<button className="nav-toggle" type="button" onClick={openSidebar}>
 						<AiOutlineMenu></AiOutlineMenu>
 					</button>
+					<TextLogo></TextLogo>
 				</div>
 				<ul className="nav-links">
 					{links.map((singleLink) => {
@@ -35,40 +37,41 @@ const Navbar = () => {
 const NavContainer = styled.nav`
 	z-index: 800;
 	width: 100%;
-	height: 5rem;
+	height: 4rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: var(--ColorWhite);
-	color: var(--ColorBlack);
+	background: var(--ColorBlack);
+	color: var(--ColorWhite);
+	
 	.nav-center {
-		width: 85%;
+		width: 87%;
 		margin: 0 auto;
 		max-width: var(--WidthMax);
 	}
+
 	.nav-header {
 		display: flex;
-		align-items: baseline;
+		align-items: center;
 		justify-content: space-between;
 	}
+
 	.nav-toggle {
 		background: transparent;
 		border: transparent;
-		color: var(--ColorBlack);
+		color: var(--ColorWhite);
 		cursor: pointer;
 		svg {
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
 	}
+
 	.nav-links {
-		display: none;
-	}
-	.userBtnsContainer {
 		display: none;
 	}
 
 	@media screen and (min-width: 768px) {
-		height: 6.3rem;
+		height: 4.5rem;
 		.nav-toggle {
 			svg {
 				font-size: 1.8rem;
@@ -77,56 +80,62 @@ const NavContainer = styled.nav`
 	}
 
 	@media screen and (min-width: 980px) {
-		height: 5.5rem;
+		height: 4.5rem;
 		box-shadow: var(--ShadowLight);
 		position: fixed;
 		top: 0;
+		
 		.nav-toggle {
 			display: none;
 		}
+
 		.nav-center {
-			width: 85%;
-			display: grid;
-			grid-template-columns: auto 1fr auto;
+			width: 92%;
+			display: flex;
 			align-items: center;
+			justify-content: space-between;
 		}
+
 		.nav-links {
 			display: flex;
 			justify-content: center;
+
 			li {
-				margin: 0 0.5rem;
+				margin-left: 2.5rem;
 			}
+
 			a {
-				color: var(--ColorBlack-85);
-				font-family: var(--FontWork);
-				font-size: 1rem;
-				text-transform: capitalize;
-				letter-spacing: 0.5px;
-				padding: 0.5rem;
+				color: var(--ColorWhite);
+				font-family: var(--FontThin);
+				text-transform: uppercase;
+				font-size: 0.85rem;
+				font-weight: 300;
+				letter-spacing: 2.8px;
 				border-bottom: 1px solid transparent;
 				transition: var(--MainTransition);
-				opacity: 0.7;
+				padding-bottom: 0.35rem;
+				opacity: 0.85;
+
 				&:hover {
-					border-bottom: 1px solid var(--ColorBlack);
-					color: var(--ColorBlack);
+					border-bottom: 1px solid var(--ColorWhite);
 					opacity: 1;
 				}
 			}
 		}
-		.userBtnsContainer {
-			display: grid;
-		}
 	}
+	
 	@media (min-width: 1150px) {
 		.nav-center {
 			max-width: 1400px;
 		}
+
 		.nav-links {
 			li {
-				margin: 0 1.7rem;
+				margin-left: 3rem;
 			}
+
 			a {
-				font-size: 1.15rem;
+				font-size: 0.95rem;
 			}
 		}
 	}

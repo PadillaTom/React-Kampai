@@ -7,6 +7,8 @@ import { links } from "../../Utils/website-data";
 
 import { useNavigationContext } from "../../Context/navigation_context";
 
+import {TextLogo} from "../../Utils/Kampai Constants";
+
 const Sidebar = () => {
 	const { isSidebarOpen, closeSidebar } = useNavigationContext();
 	return (
@@ -15,9 +17,10 @@ const Sidebar = () => {
 				className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
 			>
 				<div className="sidebar-header">
-					<button className="close-btn" type="button" onClick={closeSidebar}>
+					<button className="nav-toggle" type="button" onClick={closeSidebar}>
 						<FaTimes></FaTimes>
 					</button>
+					<TextLogo></TextLogo>
 				</div>
 				<ul className="links">
 					{links.map((singleLink) => {
@@ -36,45 +39,45 @@ const Sidebar = () => {
 
 const SidebarContainer = styled.div`
 	text-align: center;
+
 	.sidebar-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		width: 87%;
 		margin: 0 auto;
-		height: 6rem;
+		height: 4.8rem;
 	}
-	.close-btn {
-		font-size: 1.7rem;
+
+	.nav-toggle {
 		background: transparent;
-		border-color: transparent;
-		color: var(--ColorFooterDivider) !important;
-		transition: var(--TransitionFast);
+		border: transparent;
+		color: var(--ColorWhite);
 		cursor: pointer;
-		margin-top: 0.2rem;
+		svg {
+			font-size: 1.9rem;
+		}
 	}
-	.close-btn:hover {
-		color: var(--ColorSemiCrimson) !important;
-	}
+	
 	.links {
 		margin-bottom: 2.5rem;
 	}
+
 	.links a {
 		display: block;
 		text-align: left;
-		font-family: var(--FontWork);
-		font-size: 1.1rem;
-		text-transform: capitalize;
-		padding: 1rem 2.5rem;
-		color: var(--FontColorGrey);
-		transition: var(--MainTransition);
-		letter-spacing: 0.4px;
-	}
-	.links a:hover {
-		padding: 1rem 1.5rem;
-		padding-left: 3rem;
-		background: var(--ColorBlack);
+		font-family: var(--FontThin);
 		color: var(--ColorWhite);
+		font-size: 1.3rem;
+		font-weight: 200;
+		text-transform: capitalize;
+		letter-spacing: 2.5px;
+		padding: 1rem 2.5rem;
+		transition: var(--TransitionFast);
+	}
+
+	.links a:hover {
+		padding-left: 3.3rem;
 	}
 
 	.sidebar {
@@ -83,34 +86,20 @@ const SidebarContainer = styled.div`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: var(--ColorWhite);
+		background: var(--ColorBlack);
 		transition: var(--MainTransition);
 		transform: translate(-100%);
 		z-index: -1;
 	}
+
 	.show-sidebar {
 		transform: translate(0);
 		z-index: 999;
 	}
-	.userBtnsContainer {
-		margin: 2rem auto;
-	}
 
 	@media (min-width: 720px) {
 		.sidebar-header {
-			height: 8rem;
-		}
-		.close-btn {
-			font-size: 2.2rem;
-		}
-		.links a {
-			padding: 1.5rem 2.5rem;
-			font-size: 1.8rem;
-			padding-left: 3.5rem;
-		}
-		.links a:hover {
-			padding: 1.5rem 2.5rem;
-			padding-left: 4rem;
+			height: 6.7rem;
 		}
 	}
 	@media (min-width: 980px) {
