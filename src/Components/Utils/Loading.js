@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Loading = () => {
-	return (
-		<LoadingContainer className="section-center">Loading...</LoadingContainer>
-	);
+    return (<LoadingContainer className="section-center">Loading...</LoadingContainer>);
 };
 
 const LoadingContainer = styled.div`

@@ -1,15 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
-const TextLogo = () => {
-	return (
-		<LogoContainer>
+const TextLogo = ({text}) => {
+	return (<LogoContainer>
 			<Link to="/">
-				<h1>KAMPAI</h1>
+				<h1>{text}</h1>
 			</Link>
-		</LogoContainer>
-	);
+		</LogoContainer>);
 };
 
 const LogoContainer = styled.nav`
@@ -18,7 +16,8 @@ const LogoContainer = styled.nav`
 		letter-spacing: 2.7px;
 		font-family: var(--FontTextLogo);
 		font-weight: 100;
-		color: var(--ColorWhite)
+		color: var(--ColorWhite);
+		text-transform: uppercase;
 	}
 
 	@media (min-width: 720px) {
