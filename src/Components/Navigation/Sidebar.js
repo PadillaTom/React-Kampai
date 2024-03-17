@@ -60,7 +60,7 @@ const SidebarContainer = styled.div`
 	}
 	
 	.links {
-		margin-bottom: 2.5rem;
+		padding-top: 1.6rem;
 	}
 
 	.links a {
@@ -68,11 +68,11 @@ const SidebarContainer = styled.div`
 		text-align: left;
 		font-family: var(--FontThin);
 		color: var(--ColorWhite);
-		font-size: 1.3rem;
+		font-size: 1.07rem;
 		font-weight: 200;
 		text-transform: capitalize;
-		letter-spacing: 2.5px;
-		padding: 1rem 2.5rem;
+		letter-spacing: 2.8px;
+		padding: 1.2rem 2.5rem;
 		transition: var(--TransitionFast);
 	}
 
