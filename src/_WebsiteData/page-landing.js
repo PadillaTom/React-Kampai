@@ -10,5 +10,5 @@ export const LANDING = {
         IMAGE_FULL_SCREEN: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo105-scaled.jpg",
         IMAGE_MOBILE: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo121-scaled.jpg"
     },
-    IS_VIDEO: false,
+    IS_VIDEO: true,
 }
