@@ -22,10 +22,10 @@ const Sidebar = () => {
                 <button className="nav-toggle" type="button" onClick={closeSidebar}>
                     <FaTimes></FaTimes>
                 </button>
-                <TextLogo text={CLIENT_DATA.NAME}></TextLogo>
+                <TextLogo text={CLIENT_DATA.NAME} onClick={closeSidebar}></TextLogo>
             </div>
             <ul className="links">
-                <RouteMapper routes={routes}></RouteMapper>
+                <RouteMapper routes={routes} onClick={closeSidebar}></RouteMapper>
             </ul>
         </aside>
     </SidebarContainer>);
