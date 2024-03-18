@@ -17,8 +17,9 @@ function BannerFullScreenHero({data, isVideo, buttonComponent}) {
                             : data.VIDEOS.VIDEO_MOBILE
                     }
                     autoPlay
-                    loop={true}
+                    loop
                     muted
+                    playsInline
                     id={"video"}
                 />
             ) : (
