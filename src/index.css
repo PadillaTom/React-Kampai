@@ -40,8 +40,9 @@
     --FontColorDark: #181b20;
     --FontColorGrey: #656a70;
     /* Utils */
-    --MainTransition: all 0.3s linear;
+    --TransitionMain: all 0.3s linear;
     --TransitionFast: all 0.24s linear;
+    --TransitionSlow: all 0.5s linear;
     --ShadowLighter: 0px 3px 9px rgba(0, 0, 0, 0.05);
     --ShadowLight: 0px 3px 9px rgba(0, 0, 0, 0.1);
     --ShadowDark: 0px 3px 9px rgba(0, 0, 0, 0.23);
@@ -102,7 +103,7 @@ hr {
     border-color: transparent;
     box-shadow: var(--ShadowDark);
     cursor: pointer;
-    transition: var(--MainTransition);
+    transition: var(--TransitionMain);
 }
 
 .btn-white:hover {
@@ -120,7 +121,7 @@ hr {
     padding: 0.7rem 2.7rem;
     color: var(--ColorWhite);
     box-shadow: var(--ShadowLight);
-    transition: var(--MainTransition);
+    transition: var(--TransitionMain);
 }
 
 .btn-fill:hover {

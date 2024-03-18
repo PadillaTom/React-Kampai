@@ -30,7 +30,7 @@ const Navbar = () => {
 };
 
 const NavContainer = styled.nav`
-  z-index: 1000;
+  z-index: 88888;
   width: 100%;
   height: var(--NavbarHeight);
   display: flex;
@@ -109,7 +109,7 @@ const NavContainer = styled.nav`
         font-weight: 300;
         letter-spacing: 2.8px;
         border-bottom: 1px solid transparent;
-        transition: var(--MainTransition);
+        transition: var(--TransitionMain);
         padding-bottom: 0.35rem;
         opacity: 0.85;
 

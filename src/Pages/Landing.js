@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 /* Library */
 import {HeroFullScreen} from "../_Library/Page/Sections/Landing/Hero";
+import {ContentBox} from "../_Library/Page/Sections/Landing/ContentBoxes";
 import {BasicButton} from "../_Library/Buttons";
+import {Separator} from "../_Library/Page/Sections/Separator";
 
 /* Website Data */
 import {LANDING} from "../_WebsiteData/page-landing";
 import {PATHS} from "../_WebsiteData/routes";
-import {ContentBox} from "../_Library/Page/Sections/Landing/ContentBoxes";
 import {CONTENT_BOX_ABOUT} from "../_WebsiteData/constants";
-import {Separator} from "../_Library/Page/Sections/Separator";
 
 const buttonComponent = () => {
     return <BasicButton path={PATHS.MENU}
@@ -31,12 +31,13 @@ const Landing = () => {
                 buttonComponent={buttonComponent()}
             />
             {/* TODO: Insert Text: Une Histoire de Famille */}
-            <Separator height={"5rem"}/>
+            <Separator height={"2rem"}/>
             <ContentBox
                 text={CONTENT_BOX_ABOUT.TEXT}
                 ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
                 imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
             />
+            <Separator height={"2rem"}/>
         </LandingContainer>
     )
 };

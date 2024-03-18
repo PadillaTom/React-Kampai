@@ -31,7 +31,7 @@ const BasicButtonContainer = styled.div`
     text-transform: uppercase;
     letter-spacing: 3px;
     cursor: pointer;
-    transition: var(--MainTransition);
+    transition: var(--TransitionMain);
   }
 
   .btn-outlined {

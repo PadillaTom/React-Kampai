@@ -82,7 +82,7 @@ const SidebarContainer = styled.div`
     width: 100%;
     height: 100%;
     background: var(--ColorBlack);
-    transition: var(--MainTransition);
+    transition: var(--TransitionMain);
     transform: translate(-100%);
     z-index: -1;
   }

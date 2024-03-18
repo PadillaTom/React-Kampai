@@ -1,3 +1,5 @@
+import {PATHS} from "./routes";
+
 export const CLIENT_DATA = {
     NAME: "Kampai",
     COUNTRY: "Suisse",
@@ -12,6 +14,6 @@ export const CLIENT_DATA = {
 
 export const CONTENT_BOX_ABOUT = {
     TEXT: "Découvrez le restaurant",
-    CTA_URL: "/about",
+    CTA_URL: PATHS.ABOUT,
     IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo114-scaled.jpg"
 }

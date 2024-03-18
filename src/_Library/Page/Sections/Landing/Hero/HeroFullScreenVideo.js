@@ -108,21 +108,8 @@ const HeroFullScreenContainer = styled.article`
   }
 
   @media screen and (min-width: 980px) {
-    height: 90vh;
-
-    .overlay {
-      top: var(--NavbarHeight980);
-      height: 90vh;
-    }
-
-    #video {
-      top: var(--NavbarHeight980);
-      height: 90vh;
-    }
-
-    .banner-img {
-      top: var(--NavbarHeight980);
-      height: 90vh;
+    .background-container {
+      height: 88vh;
     }
   }
 `;
