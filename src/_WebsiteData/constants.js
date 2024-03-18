@@ -9,3 +9,9 @@ export const CLIENT_DATA = {
     INSTAGRAM: "https://www.instagram.com/kampai.geneve",
     FACEBOOK: "https://www.facebook.com/Kampaibarestaurant",
 }
+
+export const CONTENT_BOX_ABOUT = {
+    TEXT: "Découvrez le restaurant",
+    CTA_URL: "/about",
+    IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo114-scaled.jpg"
+}

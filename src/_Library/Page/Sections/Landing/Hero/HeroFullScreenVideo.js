@@ -60,12 +60,12 @@ const HeroFullScreenContainer = styled.article`
 
     .overlay {
       position: absolute;
-      top: -0.2rem;
+      top: -0.1rem;
       left: 0;
       background-color: var(--ColorBlack);
       opacity: 0.6;
       width: 100%;
-      height: calc(100% + 0.2rem);
+      height: 101%;
       z-index: 999;
     }
 
