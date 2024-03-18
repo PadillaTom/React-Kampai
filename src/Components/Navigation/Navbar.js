@@ -10,7 +10,7 @@ import {RouteMapper} from "../../_Library/Navigation";
 
 /* Website Data */
 import {CLIENT_DATA} from "../../_WebsiteData/constants";
-import {routes} from "../../_WebsiteData/routes";
+import {ROUTES} from "../../_WebsiteData/routes";
 
 const Navbar = () => {
     const {openSidebar} = useNavigationContext();
@@ -23,7 +23,7 @@ const Navbar = () => {
                 <TextLogo text={CLIENT_DATA.NAME}></TextLogo>
             </div>
             <ul className="nav-links">
-                <RouteMapper routes={routes}></RouteMapper>
+                <RouteMapper routes={ROUTES}></RouteMapper>
             </ul>
         </div>
     </NavContainer>);

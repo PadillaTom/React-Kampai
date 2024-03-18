@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import useWindowDimensions from "../../../../../Components/Utils/useWindowDimensions";
-import {BasicButton} from "../../../../Buttons";
 
-function BannerFullScreenHero({data, isVideo}) {
+function BannerFullScreenHero({data, isVideo, buttonComponent}) {
     const {width} = useWindowDimensions();
     const isFullScreen = width >= 980;
     return (
@@ -38,13 +37,7 @@ function BannerFullScreenHero({data, isVideo}) {
             <div className="data-container">
                 <h2 className="main-text">{data.HEADER}</h2>
                 <h2 className="sub-text">{data.HEADER_2}</h2>
-                <BasicButton path={"/menu"}
-                             text={"Voir Menu"}
-                             vPadding={"0.5rem"}
-                             hPadding={"2.5rem"}
-                             marginTop={"3rem"}
-                             isOutlined
-                ></BasicButton>
+                {buttonComponent}
             </div>
         </BannerFullScreenHeroContainer>
     );

@@ -3,29 +3,21 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 const BasicButton = ({
-                         path,
-                         text,
-                         isOutlined,
-                         vPadding,
-                         hPadding,
-                         marginTop,
+                         path, text, isOutlined, vPadding, hPadding, marginTop,
                      }) => {
-    return (
-        <BasicButtonContainer>
+    return (<BasicButtonContainer>
+        <Link to={path}>
             <button
                 type="button"
                 style={{
-                    padding: `${vPadding} ${hPadding}`,
-                    marginTop: marginTop,
+                    padding: `${vPadding} ${hPadding}`, marginTop: marginTop,
                 }}
                 className={isOutlined ? "btn-outlined" : "btn-filled"}
             >
-                <Link to={path}>
-                    {text}
-                </Link>
+                {text}
             </button>
-        </BasicButtonContainer>
-    );
+        </Link>
+    </BasicButtonContainer>);
 };
 
 const BasicButtonContainer = styled.div`

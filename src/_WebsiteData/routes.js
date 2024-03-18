@@ -1,5 +1,5 @@
 // Links:
-export const routes = [
+export const ROUTES = [
     {
         id: 1,
         name: "Le Restaurant",
@@ -21,3 +21,11 @@ export const routes = [
         url: "/contact",
     },
 ];
+
+export const PATHS = {
+    HOME: "/",
+    ABOUT: "/about",
+    MENU: "/menu",
+    WINES: "/wines",
+    CONTACT: "/contact",
+}

@@ -10,7 +10,7 @@ import {RouteMapper} from "../../_Library/Navigation";
 
 /* Website Data */
 import {CLIENT_DATA} from "../../_WebsiteData/constants";
-import {routes} from "../../_WebsiteData/routes";
+import {ROUTES} from "../../_WebsiteData/routes";
 
 const Sidebar = () => {
     const {isSidebarOpen, closeSidebar} = useNavigationContext();
@@ -25,7 +25,7 @@ const Sidebar = () => {
                 <TextLogo text={CLIENT_DATA.NAME} onClick={closeSidebar}></TextLogo>
             </div>
             <ul className="links">
-                <RouteMapper routes={routes} onClick={closeSidebar}></RouteMapper>
+                <RouteMapper routes={ROUTES} onClick={closeSidebar}></RouteMapper>
             </ul>
         </aside>
     </SidebarContainer>);
