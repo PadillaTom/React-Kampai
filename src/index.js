@@ -7,6 +7,5 @@ import {NavigationProvider} from "./Context/navigation_context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<NavigationProvider>
-		<App/>
-	</NavigationProvider>
-);
+    <App/>
+</NavigationProvider>);
