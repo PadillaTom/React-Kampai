@@ -3,11 +3,12 @@ import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 const TextLogo = ({text, onClick}) => {
-    return (<LogoContainer>
+    return (
         <Link to="/" onClick={onClick}>
-            <h1>{text}</h1>
-        </Link>
-    </LogoContainer>);
+            <LogoContainer>
+                <h1>{text}</h1>
+            </LogoContainer>
+        </Link>)
 };
 
 const LogoContainer = styled.nav`

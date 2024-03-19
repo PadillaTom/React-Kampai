@@ -45,7 +45,7 @@
     --TransitionSlow: all 0.5s linear;
     --ShadowLighter: 0px 3px 9px rgba(0, 0, 0, 0.05);
     --ShadowLight: 0px 3px 9px rgba(0, 0, 0, 0.1);
-    --ShadowDark: 0px 3px 9px rgba(0, 0, 0, 0.23);
+    --ShadowDark: 0px 3px 9px rgba(0, 0, 0, 0.4);
     --WidthMax: 1350px;
     --WidthFixed: 620px;
     --NavbarHeight: 4rem;

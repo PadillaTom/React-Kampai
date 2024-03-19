@@ -89,7 +89,7 @@ const SidebarContainer = styled.div`
 
   .show-sidebar {
     transform: translate(0);
-    z-index: 9999;
+    z-index: 999999;
   }
 
   @media (min-width: 720px) {
