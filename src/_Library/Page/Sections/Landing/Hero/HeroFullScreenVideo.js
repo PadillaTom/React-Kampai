@@ -55,6 +55,7 @@ const HeroFullScreenContainer = styled.article`
 
   .background-container {
     position: relative;
+    overflow: hidden;
     width: 100%;
     height: 92vh;
 
