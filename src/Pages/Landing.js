@@ -6,12 +6,18 @@ import {HeroFullScreen} from "../_Library/Page/Sections/Landing/Hero";
 import {ContentBox} from "../_Library/Page/Sections/Landing/ContentBoxes";
 import {BasicButton} from "../_Library/Buttons";
 import {Separator} from "../_Library/Page/Sections/Separator";
+import {FlexContainer} from "../_Library/Containers";
+import {TextBlockThin} from "../_Library/Text";
 
 /* Website Data */
 import {LANDING} from "../_WebsiteData/page-landing";
 import {PATHS} from "../_WebsiteData/routes";
-import {CONTENT_BOX_ABOUT} from "../_WebsiteData/constants";
-import {FlexContainer} from "../_Library/Containers";
+import {
+    CONTENT_BOX_ABOUT,
+    CONTENT_BOX_CARTE,
+    TEXT_HISTOIRE_FAMILLE,
+    TEXT_HISTOIRE_GOUT
+} from "../_WebsiteData/constants";
 
 const buttonComponent = () => {
     return <BasicButton path={PATHS.MENU}
@@ -29,14 +35,14 @@ const contentBoxes = () => {
             text={CONTENT_BOX_ABOUT.TEXT}
             ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
             imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-            height={"75vh"}
+            height={"45vh"}
         />,
         <ContentBox
-            text={CONTENT_BOX_ABOUT.TEXT}
-            ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
-            imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-            height={"75vh"}
-        />
+            text={CONTENT_BOX_CARTE.TEXT}
+            ctaUrl={CONTENT_BOX_CARTE.CTA_URL}
+            imageUrl={CONTENT_BOX_CARTE.IMG_URL}
+            height={"45vh"}
+        />,
     ]
 }
 const Landing = () => {
@@ -48,14 +54,40 @@ const Landing = () => {
                 data={LANDING}
                 buttonComponent={buttonComponent()}
             />
-            {/* TODO: Insert Text: Une Histoire de Famille */}
-            <Separator height={"5rem"}/>
+
+            <Separator height={"7rem"}/>
+
+            <TextBlockThin
+                text={TEXT_HISTOIRE_FAMILLE}
+                size={"1.3rem"}
+                spacing={"1px"}
+                color={"var(--ColorWhite)"}
+                lineHeight={"1.75"}
+                maxWidth={"85%"}
+            ></TextBlockThin>
+
+            <Separator height={"6rem"}/>
+
             <FlexContainer
                 components={contentBoxes()}
-                gap={"1.8rem"}
+                gap={"1.9rem"}
+                gapFullScreen={"2.5rem"}
                 containerWidth={"92%"}
             />
+
+            <Separator height={"6rem"}/>
+
+            <TextBlockThin
+                text={TEXT_HISTOIRE_GOUT}
+                size={"1.3rem"}
+                spacing={"1px"}
+                color={"var(--ColorWhite)"}
+                lineHeight={"1.75"}
+                maxWidth={"85%"}
+            ></TextBlockThin>
+
             <Separator height={"5rem"}/>
+
         </LandingContainer>
     )
 };

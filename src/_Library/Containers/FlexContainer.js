@@ -2,14 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import useWindowDimensions from "../../Components/Utils/useWindowDimensions";
 
-function FlexContainer({components, gap, maxRows = 3, containerWidth}) {
+function FlexContainer({components, gap, maxRows = 3, containerWidth, gapFullScreen}) {
     const {width} = useWindowDimensions();
 
     if (width < 980) {
         maxRows = 1
     } else {
         containerWidth = "97%";
-        gap = "0.95rem";
+        gap = gapFullScreen;
         (components.length < 3) && (maxRows = components.length);
     }
 
