@@ -41,8 +41,9 @@ export const TEXT_HISTOIRE_GOUT = "Le Pérou est un melting-pot gastronomique do
     "le terme nikkei fait référence à la cuisine nippo-péruvienne."
 
 export const IMAGE_SWIPER_URLS = [
-    "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo067-scaled.jpg",
-    "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_35.jpg",
-    "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo083-scaled.jpg",
+    "https://kampai.ch/wp-content/uploads/2022/07/kampaisliderwebsite22.jpg",
     "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_33.jpg",
+    "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_26.jpg",
+    "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_plat_20.jpg",
+    "https://kampai.ch/wp-content/uploads/2022/07/kampaisliderwebsite2-2.jpg"
 ]

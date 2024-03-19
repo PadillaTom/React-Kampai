@@ -7,8 +7,6 @@ import styled from "styled-components";
 function ImageSwiper({imgUrls, swiperHeight, swiperWidth = "100%"}) {
     return (
         <SwiperContainer>
-
-
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
@@ -26,19 +24,23 @@ function ImageSwiper({imgUrls, swiperHeight, swiperWidth = "100%"}) {
                 }}
                 style={{
                     width: swiperWidth,
+                    maxWidth: "1250px",
                     margin: "0 auto"
                 }}
             >
                 {imgUrls.map((i, index) => {
-                    return <SwiperSlide key={index} style={{
-
-                        height: swiperHeight,
-                    }}>
-                        <img src={i} alt=" Caroussel" style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover"
-                        }}/>
+                    return <SwiperSlide
+                        key={index}
+                        style={{
+                            height: swiperHeight,
+                        }}>
+                        <img
+                            src={i} alt=" Caroussel"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover"
+                            }}/>
                     </SwiperSlide>
                 })}
             </Swiper>
@@ -50,7 +52,12 @@ const SwiperContainer = styled.section`
   .swiper-button-prev, .swiper-button-next {
     color: var(--ColorWhite)
   }
-`
 
+  @media screen and (min-width: 980px) {
+    .swiper-slide {
+      height: 65vh !important;
+    }
+  }
+`
 
 export default ImageSwiper;
