@@ -1,10 +1,18 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import useWindowDimensions from "../../../../../Components/Utils/useWindowDimensions";
 
-function ContentBox({imageUrl, text, ctaUrl}) {
+function ContentBox({imageUrl, text, ctaUrl, height = "50vh"}) {
+    const {width} = useWindowDimensions();
+    if (width >= 980) {
+        height = "63vh"
+    }
     return (
-        <ContentBoxContainer>
+        <ContentBoxContainer style={{
+            width: "100%",
+            height: height,
+        }}>
             <Link to={ctaUrl}>
                 <div className="img-container">
                     <div className="image-overlay"></div>
@@ -20,12 +28,8 @@ function ContentBox({imageUrl, text, ctaUrl}) {
 
 const ContentBoxContainer = styled.article`
   position: relative;
-  padding: 2rem 0rem;
-  width: 92%;
-  height: 50vh;
   margin: 0 auto;
   cursor: pointer;
-
 
   .img-container {
     position: relative;
@@ -38,7 +42,7 @@ const ContentBoxContainer = styled.article`
       top: 0;
       left: 0;
       background-color: var(--ColorBlack);
-      opacity: 0.35;
+      opacity: 0.2;
       width: 100%;
       height: 100%;
       z-index: 900;
@@ -64,8 +68,8 @@ const ContentBoxContainer = styled.article`
       font-family: var(--FontThick);
       text-transform: uppercase;
       text-align: center;
-      font-size: 2rem;
-      font-weight: 400;
+      font-size: 1.7rem;
+      font-weight: 500;
       letter-spacing: 1.5px;
     }
   }
@@ -73,7 +77,7 @@ const ContentBoxContainer = styled.article`
   &:hover {
     .img-container {
       img {
-        transform: scale(1.05);
+        transform: scale(1.06);
       }
     }
   }

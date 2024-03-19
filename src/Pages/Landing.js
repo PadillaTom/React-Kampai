@@ -11,6 +11,7 @@ import {Separator} from "../_Library/Page/Sections/Separator";
 import {LANDING} from "../_WebsiteData/page-landing";
 import {PATHS} from "../_WebsiteData/routes";
 import {CONTENT_BOX_ABOUT} from "../_WebsiteData/constants";
+import {FlexContainer} from "../_Library/Containers";
 
 const buttonComponent = () => {
     return <BasicButton path={PATHS.MENU}
@@ -20,6 +21,23 @@ const buttonComponent = () => {
                         marginTop={"3rem"}
                         isOutlined
     ></BasicButton>
+}
+
+const contentBoxes = () => {
+    return [
+        <ContentBox
+            text={CONTENT_BOX_ABOUT.TEXT}
+            ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
+            imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
+            height={"65vh"}
+        />,
+        <ContentBox
+            text={CONTENT_BOX_ABOUT.TEXT}
+            ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
+            imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
+            height={"65vh"}
+        />
+    ]
 }
 const Landing = () => {
 
@@ -31,19 +49,19 @@ const Landing = () => {
                 buttonComponent={buttonComponent()}
             />
             {/* TODO: Insert Text: Une Histoire de Famille */}
-            <Separator height={"2rem"}/>
-            <ContentBox
-                text={CONTENT_BOX_ABOUT.TEXT}
-                ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
-                imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
+            <Separator height={"5rem"}/>
+            <FlexContainer
+                components={contentBoxes()}
+                gap={"1.8rem"}
+                containerWidth={"92%"}
             />
-            <Separator height={"2rem"}/>
+            <Separator height={"5rem"}/>
         </LandingContainer>
     )
 };
 
 const LandingContainer = styled.main`
-  background: var(--ColorBlack);
+  background: var(--ColorBlack-1);
 `;
 
 
