@@ -29,13 +29,13 @@ const contentBoxes = () => {
             text={CONTENT_BOX_ABOUT.TEXT}
             ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
             imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-            height={"65vh"}
+            height={"75vh"}
         />,
         <ContentBox
             text={CONTENT_BOX_ABOUT.TEXT}
             ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
             imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-            height={"65vh"}
+            height={"75vh"}
         />
     ]
 }
