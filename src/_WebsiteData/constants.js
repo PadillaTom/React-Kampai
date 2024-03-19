@@ -39,3 +39,10 @@ export const TEXT_HISTOIRE_GOUT = "Le Pérou est un melting-pot gastronomique do
     "bonite séchée, le poisson cru, ont apporté une touche japonisante, notamment au ceviche et au tiradito. L’immigration " +
     "japonaise s’est encore renforcée à la fin du 20e siècle, suite à un accord entre le Japon et le Pérou. Aujourd’hui, " +
     "le terme nikkei fait référence à la cuisine nippo-péruvienne."
+
+export const IMAGE_SWIPER_URLS = [
+    "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo067-scaled.jpg",
+    "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_35.jpg",
+    "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo083-scaled.jpg",
+    "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_33.jpg",
+]

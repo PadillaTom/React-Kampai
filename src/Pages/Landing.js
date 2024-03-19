@@ -8,6 +8,7 @@ import {BasicButton} from "../_Library/Buttons";
 import {Separator} from "../_Library/Page/Sections/Separator";
 import {FlexContainer} from "../_Library/Containers";
 import {TextBlockThin} from "../_Library/Text";
+import {ImageSwiper} from "../_Library/ImageSwiper";
 
 /* Website Data */
 import {LANDING} from "../_WebsiteData/page-landing";
@@ -15,6 +16,7 @@ import {PATHS} from "../_WebsiteData/routes";
 import {
     CONTENT_BOX_ABOUT,
     CONTENT_BOX_CARTE,
+    IMAGE_SWIPER_URLS,
     TEXT_HISTOIRE_FAMILLE,
     TEXT_HISTOIRE_GOUT
 } from "../_WebsiteData/constants";
@@ -87,6 +89,13 @@ const Landing = () => {
                 ></TextBlockThin>
 
                 <Separator height={"5rem"}/>
+
+                <ImageSwiper
+                    imgUrls={IMAGE_SWIPER_URLS}
+                    swiperHeight={"35rem"}
+                />
+
+                <Separator height={"8rem"}/>
             </div>
         </LandingContainer>
     )
