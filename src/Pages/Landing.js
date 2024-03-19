@@ -35,13 +35,11 @@ const contentBoxes = () => {
             text={CONTENT_BOX_ABOUT.TEXT}
             ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
             imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-            height={"45vh"}
         />,
         <ContentBox
             text={CONTENT_BOX_CARTE.TEXT}
             ctaUrl={CONTENT_BOX_CARTE.CTA_URL}
             imageUrl={CONTENT_BOX_CARTE.IMG_URL}
-            height={"45vh"}
         />,
     ]
 }
@@ -54,46 +52,53 @@ const Landing = () => {
                 data={LANDING}
                 buttonComponent={buttonComponent()}
             />
+            <div className="max-width-container">
+                <Separator height={"7rem"}/>
 
-            <Separator height={"7rem"}/>
+                <TextBlockThin
+                    text={TEXT_HISTOIRE_FAMILLE}
+                    size={"1.3rem"}
+                    spacing={"1px"}
+                    color={"var(--ColorWhite)"}
+                    lineHeight={"1.75"}
+                    maxWidth={"85%"}
+                ></TextBlockThin>
 
-            <TextBlockThin
-                text={TEXT_HISTOIRE_FAMILLE}
-                size={"1.3rem"}
-                spacing={"1px"}
-                color={"var(--ColorWhite)"}
-                lineHeight={"1.75"}
-                maxWidth={"85%"}
-            ></TextBlockThin>
+                <Separator height={"6rem"}/>
 
-            <Separator height={"6rem"}/>
+                <FlexContainer
+                    components={contentBoxes()}
+                    gap={"1.9rem"}
+                    gapFullScreen={"2rem"}
+                    containerWidth={"92%"}
+                    mobileHeight={"40rem"}
+                    fullScreenHeight={"35rem"}
+                />
 
-            <FlexContainer
-                components={contentBoxes()}
-                gap={"1.9rem"}
-                gapFullScreen={"2.5rem"}
-                containerWidth={"92%"}
-            />
+                <Separator height={"6rem"}/>
 
-            <Separator height={"6rem"}/>
+                <TextBlockThin
+                    text={TEXT_HISTOIRE_GOUT}
+                    size={"1.3rem"}
+                    spacing={"1px"}
+                    color={"var(--ColorWhite)"}
+                    lineHeight={"1.75"}
+                    maxWidth={"85%"}
+                ></TextBlockThin>
 
-            <TextBlockThin
-                text={TEXT_HISTOIRE_GOUT}
-                size={"1.3rem"}
-                spacing={"1px"}
-                color={"var(--ColorWhite)"}
-                lineHeight={"1.75"}
-                maxWidth={"85%"}
-            ></TextBlockThin>
-
-            <Separator height={"5rem"}/>
-
+                <Separator height={"5rem"}/>
+            </div>
         </LandingContainer>
     )
 };
 
 const LandingContainer = styled.main`
   background: var(--ColorBlack-1);
+
+  .max-width-container {
+    max-width: 2250px;
+    margin: 0 auto;
+  }
 `;
 
 

@@ -1,17 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import useWindowDimensions from "../../../../../Components/Utils/useWindowDimensions";
 
-function ContentBox({imageUrl, text, ctaUrl, height = "50vh"}) {
-    const {width} = useWindowDimensions();
-    if (width >= 980) {
-        height = "63vh"
-    }
+function ContentBox({imageUrl, text, ctaUrl}) {
+
     return (
         <ContentBoxContainer style={{
             width: "100%",
-            height: height,
+            height: "100%",
         }}>
             <Link to={ctaUrl}>
                 <div className="img-container">
