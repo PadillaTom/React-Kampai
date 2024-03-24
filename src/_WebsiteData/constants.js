@@ -1,5 +1,10 @@
 import {PATHS} from "./routes";
 
+/*
+* ===========================================================
+* 1. Client Data
+* ===========================================================
+* */
 export const CLIENT_DATA = {
     NAME: "Kampai",
     COUNTRY: "Suisse",
@@ -12,17 +17,11 @@ export const CLIENT_DATA = {
     FACEBOOK: "https://www.facebook.com/Kampaibarestaurant",
 }
 
-export const CONTENT_BOX_ABOUT = {
-    TEXT: "Découvrez le restaurant",
-    CTA_URL: PATHS.ABOUT,
-    IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo114-scaled.jpg"
-}
-
-export const CONTENT_BOX_CARTE = {
-    TEXT: "Notre Carte",
-    CTA_URL: PATHS.MENU,
-    IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_4.jpg"
-}
+/*
+* ===========================================================
+* 2. Client Texts
+* ===========================================================
+* */
 
 export const TEXT_HISTOIRE_FAMILLE = "Le KAMPAI, c’est une histoire de famille. " +
     "Oscar Zapata, architecte d’intérieur de talent, a voulu que ce lieu soit le plus élégant et surtout le plus cosy en " +
@@ -40,6 +39,40 @@ export const TEXT_HISTOIRE_GOUT = "Le Pérou est un melting-pot gastronomique do
     "japonaise s’est encore renforcée à la fin du 20e siècle, suite à un accord entre le Japon et le Pérou. Aujourd’hui, " +
     "le terme nikkei fait référence à la cuisine nippo-péruvienne."
 
+
+/*
+* ===========================================================
+* 3. Landing Section
+* ===========================================================
+* */
+export const HERO = {
+    HEADER: "Bienvenue",
+    HEADER_2: "Kampai - Restaurant Bar",
+    CTA_TEXT: "Réservations",
+    CTA_PATH: PATHS.RESERVATION,
+    VIDEOS: {
+        VIDEO_FULL_SCREEN: "https://kampai.ch/wp-content/uploads/2024/03/humosalmon1.mp4",
+        VIDEO_MOBILE: "https://kampai.ch/wp-content/uploads/2024/03/production-i2d_4255515.mp4"
+    },
+    IMAGES: {
+        IMAGE_FULL_SCREEN: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo105-scaled.jpg",
+        IMAGE_MOBILE: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo121-scaled.jpg"
+    },
+    IS_VIDEO: true,
+}
+
+export const CONTENT_BOX_ABOUT = {
+    TEXT: "Découvrez le restaurant",
+    CTA_URL: PATHS.ABOUT,
+    IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/kampai_photo114-scaled.jpg"
+}
+
+export const CONTENT_BOX_CARTE = {
+    TEXT: "Notre Carte",
+    CTA_URL: PATHS.MENU,
+    IMG_URL: "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_4.jpg"
+}
+
 export const IMAGE_SWIPER_URLS = [
     "https://kampai.ch/wp-content/uploads/2022/07/kampaisliderwebsite22.jpg",
     "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_ambiance_plats_33.jpg",
@@ -47,3 +80,21 @@ export const IMAGE_SWIPER_URLS = [
     "https://kampai.ch/wp-content/uploads/2024/03/bd_kampai_plat_20.jpg",
     "https://kampai.ch/wp-content/uploads/2022/07/kampaisliderwebsite2-2.jpg"
 ]
+
+/*
+* ===========================================================
+* 4.
+* ===========================================================
+* */
+
+/*
+* ===========================================================
+* 5.
+* ===========================================================
+* */
+
+/*
+* ===========================================================
+* 6.
+* ===========================================================
+* */

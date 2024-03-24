@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Navbar, Sidebar} from "../Navigation";
 import {ScrollToTop} from "../Utils";
 
-import {About, Contact, Landing, Menu, Wines} from "../../Pages";
+import {About, Contact, Landing, Menu, Reservation, Wines} from "../../Pages";
 
 function App() {
     return (
@@ -32,6 +32,9 @@ function App() {
                 </Route>
                 <Route path="/contact">
                     <Contact></Contact>
+                </Route>
+                <Route path="/reservation">
+                    <Reservation></Reservation>
                 </Route>
             </Switch>
         </Router>

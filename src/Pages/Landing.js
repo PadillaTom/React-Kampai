@@ -11,47 +11,22 @@ import {TextBlockThin} from "../_Library/Text";
 import {ImageSwiper} from "../_Library/ImageSwiper";
 
 /* Website Data */
-import {LANDING} from "../_WebsiteData/page-landing";
-import {PATHS} from "../_WebsiteData/routes";
 import {
     CONTENT_BOX_ABOUT,
     CONTENT_BOX_CARTE,
+    HERO,
     IMAGE_SWIPER_URLS,
     TEXT_HISTOIRE_FAMILLE,
     TEXT_HISTOIRE_GOUT
 } from "../_WebsiteData/constants";
 
-const buttonComponent = () => {
-    return <BasicButton path={PATHS.MENU}
-                        text={"Voir Menu"}
-                        vPadding={"0.5rem"}
-                        hPadding={"2.5rem"}
-                        marginTop={"3rem"}
-                        isOutlined
-    ></BasicButton>
-}
-
-const contentBoxes = () => {
-    return [
-        <ContentBox
-            text={CONTENT_BOX_ABOUT.TEXT}
-            ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
-            imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
-        />,
-        <ContentBox
-            text={CONTENT_BOX_CARTE.TEXT}
-            ctaUrl={CONTENT_BOX_CARTE.CTA_URL}
-            imageUrl={CONTENT_BOX_CARTE.IMG_URL}
-        />,
-    ]
-}
 const Landing = () => {
 
     return (
         <LandingContainer>
             <HeroFullScreen
-                isVideo={LANDING.IS_VIDEO}
-                data={LANDING}
+                isVideo={HERO.IS_VIDEO}
+                data={HERO}
                 buttonComponent={buttonComponent()}
             />
             <div className="max-width-container">
@@ -110,5 +85,35 @@ const LandingContainer = styled.main`
   }
 `;
 
+/*
+* ===========================================================
+* Functional Components
+* ===========================================================
+* */
+const buttonComponent = () => {
+    return <BasicButton
+        text={HERO.CTA_TEXT}
+        path={HERO.CTA_PATH}
+        vPadding={"0.5rem"}
+        hPadding={"2.5rem"}
+        marginTop={"3rem"}
+        isOutlined
+    ></BasicButton>
+}
+
+const contentBoxes = () => {
+    return [
+        <ContentBox
+            text={CONTENT_BOX_ABOUT.TEXT}
+            ctaUrl={CONTENT_BOX_ABOUT.CTA_URL}
+            imageUrl={CONTENT_BOX_ABOUT.IMG_URL}
+        />,
+        <ContentBox
+            text={CONTENT_BOX_CARTE.TEXT}
+            ctaUrl={CONTENT_BOX_CARTE.CTA_URL}
+            imageUrl={CONTENT_BOX_CARTE.IMG_URL}
+        />,
+    ]
+}
 
 export default Landing;
