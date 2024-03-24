@@ -47,8 +47,8 @@ export const TEXT_HISTOIRE_GOUT = "Le Pérou est un melting-pot gastronomique do
 * */
 export const HERO = {
     HEADER: "Bienvenue",
-    HEADER_2: "Kampai - Restaurant Bar",
-    CTA_TEXT: "Réservations",
+    HEADER_2: "KAMPAI - Restaurant & Bar",
+    CTA_TEXT: "Je Réserve",
     CTA_PATH: PATHS.RESERVATION,
     VIDEOS: {
         VIDEO_FULL_SCREEN: "https://kampai.ch/wp-content/uploads/2024/03/humosalmon1.mp4",

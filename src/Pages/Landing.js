@@ -94,6 +94,7 @@ const buttonComponent = () => {
     return <BasicButton
         text={HERO.CTA_TEXT}
         path={HERO.CTA_PATH}
+        fontSize={"1.2rem"}
         vPadding={"0.5rem"}
         hPadding={"2.5rem"}
         marginTop={"3rem"}
